@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        * {
+            padding: 0px;
+            margin:  0px;
+        }
+        body {
+            text-align: center; 
+        }
+        header {
+            height: 30vh;
+            color: yellow;
+            text-align: center;
+            background-color: rgb(43, 42, 42);
+        }
+        h1 {
+            padding-top: 30px;
+            font-size: 3em;
+            text-shadow: 0px 0px 10px black;
+            padding-bottom: 10px;
+        }
+        h1:hover {
+            text-shadow: 0px 0px 10px yellow;
+        }
+        header > p {
+            font-weight: normal;
+        }
+        main {
+            padding: 50px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           line-height: 3em;
+        }
+        div {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            animation: ani infinite 1s;
+        }
+        @keyframes ani {
+            0% {
+                box-shadow: 0px 0px 5px black;
+            }
+            50% {
+                box-shadow: 0px 0px 20px black;
+            }
+            100% {
+                box-shadow: 0px 0px 5px black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript</h1>
+        <p>Iniciando estudos DOM</p>
+    </header>
+
+    <main>
+        <p>Aqui vai o resultado</p>
+        <div id="container"></div>
+        <p>Aprendendo a usar o <strong>DOM </strong> em JavaScript</p>  
+    </main>
+    
+    <script>
+        var escolha = window.prompt('1 - Vermelho   2 - Azul    3 - Verde   4 - Amarelo')
+        if(escolha == 1){
+            var cor = window.document.getElementById('container')
+            cor.style.background = 'red'
+        } else if(escolha == 2){
+            var cor = window.document.getElementById('container')
+            cor.style.background = 'blue'
+        } else if(escolha == 3){
+            var cor = window.document.getElementById('container')
+            cor.style.background = 'green'
+        } else if(escolha == 4){
+            var cor = window.document.getElementById('container')
+            cor.style.background = 'yellow'
+        } else {
+            document.write(`Opção ${escolha} inválida!`)
+        } 
+    </script>
+</body>
+</html>
