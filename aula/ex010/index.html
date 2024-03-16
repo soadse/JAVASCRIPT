@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+    </style>
+</head>
+
+    <input type="text" name="senha" id="senha" placeholder="Crie uma senha">
+    <input type="submit" value="Cadastrar" onclick="cadastrar()"><br><br>
+
+
+
+    <input type="password" name="conf" id="confirma" placeholder="Digite sua senha">
+    <input type="submit" value="Entrar" onclick="verificar()">
+    <div id="resp"></div>
+
+<body>
+
+
+    <script>
+        function cadastrar(){
+            var senha_cadastro = window.document.getElementById('senha')
+        }
+        function verificar(){
+            const senha_cadastro = window.document.getElementById('senha')
+            var senha_confirma = window.document.getElementById('confirma')
+            var n1 = (senha_cadastro.value)
+            var n2 = (senha_confirma.value)
+            var n3 = 3
+            if (n1 === n2){
+                var resp = window.document.getElementById('resp')
+                resp.innerText = ('Acesso Permitido')
+            } else {
+                var resp = window.document.getElementById('resp')
+                resp.innerText = ('Acesso Negado')
+            }
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>
