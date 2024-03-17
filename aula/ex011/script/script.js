@@ -1,7 +1,7 @@
-var vel = 12
-if (vel > 60){
-    console.log('Velocidade ecedida! Multado')
+var pais = 'Brasil'
+console.log(`Vivendo em ${pais}`)
+if (pais == 'Brasil'){
+    console.log('Você é brasileiro')
 } else {
-    console.log('Velocidade permitida!')
-    console.log('Dirija com segurança!')
+    console.log('Você é estrangeiro')
 }

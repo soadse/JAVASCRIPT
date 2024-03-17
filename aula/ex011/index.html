@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condições</title>
+    <title>Detran</title>
     <style>
         * {
             padding: 0px;
@@ -13,22 +13,43 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(43, 39, 39);
+            background-color: rgb(53, 53, 214);
             width: 100%;
             height: 150px;
         }
         header > h1 {
-            color: yellow;
+            color: white;
             font-size: 3em;
+        }
+        main {
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>JavaScript</h1>
+        <h1>Sistema de Multas</h1>
     </header>
+    <main>
+        <label for="vel">Velocidade do carro: </label>
+        <input type="number" name="vel" id="vel">Km/h
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="caixa"></div>
+    </main>
     
+    <script>
+        function verificar() {
+            var vel = window.document.getElementById('vel')
+            var velo = Number(vel.value)
+            var caixa = window.document.getElementById('caixa')
+            if (velo > 60){
+                caixa.innerText = ('Multado')
+            } else {
+                caixa.innerText = ('Velocidade certa!')
+            }
 
+        }
+    </script>
     <script src="script/script.js"></script>
 </body>
 </html>
