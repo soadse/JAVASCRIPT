@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagens/votacao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.651);
+    margin-bottom: 30px;
+}
+header > h1 {
+    background-color: rgba(0, 0, 0, 0.411);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 3em;
+}
+main {
+    margin: 10px;
+}
+main > p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 2em;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+main > p > a {
+    text-decoration: none;
+}
+main > p > a:hover {
+    text-decoration: underline;
+}
+main > label {
+    font-size: 2em;
+}
+main > .container > #idade {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 2em;
+}
+footer > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+footer > p > a:hover {
+    text-decoration: underline;
+}

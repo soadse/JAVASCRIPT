@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <h1>Você Vota?</h1>
+    </header>
+    <main>
+        <p>Conforme o <a href="https://constituicao.stf.jus.br/dispositivo/cf-88-parte-1-titulo-2-capitulo-4-artigo-14#:~:text=%C2%A7%201%C2%BA%20O%20alistamento%20eleitoral,os%20inalist%C3%A1veis%20e%20os%20analfabetos." target="_blank" rel="external">artigo 14, parágrafo 1º</a>, da Constituição, o alistamento eleitoral e o voto são obrigatórios para os eleitores com idade acima de 18 anos e facultativo para os analfabetos, para os eleitores <strong>maiores de 16 e menores de 18 anos</strong>, assim como para os <strong>maiores de 70 anos</strong>.</p>
+
+        <p>Apesar de o voto ser facultativo para alguns eleitores, eles são obrigados a comparecer às convocações para revisões do eleitorado, sob risco de cancelamento do título de eleitor.</p>
+
+
+        <label for="idade">Digite seu ano de nascimento para saber se você pode votar ou não:</label>
+        <div class="container">
+            <input type="number" name="idade" id="idade">
+            <input type="submit" value="Verificar" id="verif" onclick="verificar()">
+            <div id="res"></div>
+        </div>   
+    </main>
+    <footer>
+        <p><a href="https://github.com/soadse">GitHub</a></p>
+    </footer>
+    
+
+    <script>
+        function verificar(){
+            var res = window.document.getElementById('res')
+            var idade = window.document.getElementById('idade')
+            var ano = 2024
+            var ida = Number(idade.value)
+            var idad = ano - ida
+            var saber = 16 - idad
+            var saberano = 2024 + saber
+            var passou = idad - 18
+            if (idad < 16){
+                
+                res.innerText = (`Ops...\nCom ${idad} você ainda não pode votar!\n
+                Daqui a ${saber} anos você podera votar com a idade mínima de 16 anos.(Voto Facultativo).\n
+                Com isso você podera votar no ano de ${saberano}!`)
+                res.style.fontSize = '20px'
+            } else if(idad < 18){
+                res.innerText = (`Pode votar!\n
+                Com ${idad} anos o voto é vacultativo`)
+                res.style.fontSize = '20px'
+
+            }
+            else if(idad == 18) {
+                res.innerText = ('Você vota esse ano com 18 anos!')
+                res.style.fontSize = '20px'
+            } else if(idad > 18 && idad < 70) {
+                res.innerText = (`Com ${idad} anos\n
+                Se você ainda não votou, então você esta atrasado para isso a ${passou} anos.\n
+                Você deveria ter votado no ano de ${2024 - passou}, quando você ainda tinha 18 anos!`)
+                res.style.fontSize = '20px'
+            } else if(idad >= 70){
+                res.innerText = (`Com ${idad} anos o vota é vacultativo!`)
+                res.style.fontSize = '20px'
+            }
+            
+        }
+    </script>
+</body>
+</html>
