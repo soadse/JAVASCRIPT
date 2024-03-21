@@ -1,10 +1,19 @@
 @charset "UTF-8";
 
+/* Typical Device Breakpoints
+Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 992px.
+Small screens, laptops(notebook) – 993px — 1024px.
+Desktops(computador, large screens – 1025px — 1366px.
+Extra large screens, TV – 1367px, and more
+*/
+
 * {
     padding: 0px;
     margin: 0px;
 }
 body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100vw;
     height: 100vh;
     background-color: lightblue;
@@ -22,9 +31,13 @@ body {
     background-color: lightcoral;
     border-radius: 10px;
 }
-#container > #imagem {
-    background-color: lightgreen;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+#container > #data {
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+}
+#container > #hora {
+    font-size: 3em;
+}
+#container > #dia_semana {
 }
