@@ -12,18 +12,38 @@ body {
     flex-direction: column;
     width: 100%;
     height: 90vh;
-    background-color: rgb(73, 73, 255);
+    background-image: url(../imagens/portrait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+h1 {
+    color: orange;
+    font-size: 3em;
+    text-shadow: 5px 5px 5px black;
 }
 #container {
     display: flex;
     justify-content: center;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(255, 255, 0, 0.5);
     width: 90%;
-    height: 250px;
+    height: 300px;
     border-radius: 10px;
     margin: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.575);
+    font-weight: bolder;
+    color: rgb(0, 0, 112);
+}
+#container > .respostas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container  #res {
+    text-align: start;
 }
 #container > #tabuada {
     display: flex;
