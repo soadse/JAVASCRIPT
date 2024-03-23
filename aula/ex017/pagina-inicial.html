@@ -12,23 +12,66 @@
     <header> 
     </header>
     <main>
-        <p id="saldo-conta">R$: 1.237,98</p>
-        <div #dinheiro>
-            <p id="saldo">
-                <p id="img-nao-mostra" class="img-pi" onclick="mostra()">
-                    <span class="material-symbols-outlined">
-                    visibility_off
-                    </span>
-                </p>
-    
-                
-                <p id="img-mostra" class="img-pi" onclick="nao_mostra()">
-                    <span class="material-symbols-outlined">
-                        visibility
-                        </span>
-                </p>
-            </p>
+        <div id="container1">
+            <p id="saldo2">Conta</p>
+            <p id="saldo"><span id="R$">R$: <span id="valor">0</span></span></p>
+            <span id="mostra" class="material-symbols-outlined item-saldo" onclick="nao_mostra()">visibility</span>
+            <span id="n-mostra" class="material-symbols-outlined item-saldo" onclick="mostra()">visibility_off</span>
         </div>
+
+
+        <div id="container2">
+            <div class="area-pag"><img onclick="area_pix()" src="imagens/pix.png" width="40px" alt=""><p>pix</p></div>
+
+            <div class="area-pag"><span><img onclick="area_pagar()" src="imagens/codigo-de-barras.png" width="40px" alt=""></span><p>pagar</p></div>
+
+            <div class="area-pag"><img onclick="area_saque()" src="imagens/sacar.png" width="40px" alt=""><p>Sacar</p></area-pag></div>
+
+            <div class="area-pag"><img onclick="area_deposito()" src="imagens/deposito.png" width="40px" alt=""><p>Depositar</p></div>
+        </div>
+
+
+        <div id="container3">
+            <div id="deposito" class="perimetro">
+                <div id="deposito2" class="perimetro2">
+                    <label for="dep">Digite o valor do depósito:</label>
+                    <input type="text" name="dep" id="dep" class="perimetro3" placeholder="R$ 00">
+                    <input type="submit" value="Enviar" id="envio" class="perimetro4" onclick="depositarr()" onmouseout="sair()">
+                </div>
+            </div>
+
+
+
+            <div id="saquar" class="perimetro">
+                <div id="saquar2" class="perimetro2">
+                    <label for="saq">Digite o valor do saque:</label>
+                    <input type="text" name="saq" id="saq" class="perimetro3" placeholder="R$ 00">
+                    <input type="submit" value="Sacar" id="envio" class="perimetro4" onclick="saquarr()" onmouseout="sair()">
+                </div>
+            </div>
+
+
+
+            <div id="pagar" class="perimetro">
+                <div id="pagar2" class="perimetro2">
+                    <label for="pag">Digite o valor do saque:</label>
+                    <input type="text" name="pag" id="pag" class="perimetro3" placeholder="R$ 00">
+                    <input type="submit" value="Pagar" id="envio" class="perimetro4" onclick="pagarr()" onmouseout="sair()">
+                </div>
+            </div>
+
+
+
+            <div id="pix" class="perimetro">
+                <div id="pix2" class="perimetro2">
+                    <label for="pi">Digite o valor do pix:</label>
+                    <input type="text" name="pi" id="pi" class="perimetro3" placeholder="R$ 00">
+                    <input type="submit" value="Enviar" id="envio" class="perimetro4" onclick="pixx()" onmouseout="sair()">
+                </div>
+            </div>
+        </div>
+
+
     </main>
     <script src="script/script.js"></script>
 </body>

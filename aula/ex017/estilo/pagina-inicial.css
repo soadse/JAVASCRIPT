@@ -11,41 +11,136 @@
 body {
     width: 100vw;
     height: 90vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header {
+    width: 100%;
+    height: 20%;
+    background-color: var(--principal);
+}
+main {
+}
+main > #container1 {
+    height: 150px;
+    width: 100%;
+    display: flex;
+}
+
+main > #container1 > .item-saldo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 200px;
-    background-color: var(--principal);
+    background-color: rgba(0, 0, 0, 0.26);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2em;
+    cursor: pointer;
+}
+main > #container1 > #saldo {
+    display: none;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    font-size: 2em;
+}
+main > #container1 > #saldo2 {
+    position: absolute;
+    left: 2%;
+    font-weight: bolder;
+    font-size: 2em;
+}
+main > #container1 #valor {
+    margin-left: 20px;
+}
+main > #container1 > #mostra {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 29%;
+}
+main > #container1 > #n-mostra {
+    position: absolute;
+    right: 5%;
+    top: 29%;
 }
 
-main {
+
+
+
+main > #container2 {
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100px;
 }
-main > #saldo-conta {
-    display: none;
-    position: absolute;
-    left: 10px;
-    font-weight: bolder;
-    font-size: 2em;
-}
-
-main .img-pi {
+main > #container2 > .area-pag > img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bcaac9;
-    margin-right: 20px;
+    background-color: rgba(128, 128, 128, 0.123);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;  
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
-main #img-mostra {
-     display: none;
+main > #container2 > .area-pag > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.123);
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
+main > #container2 > .area-pag > img:hover {
+    background-color: var(--principal);
+}
+main > #container2 > .area-pag > span:hover {
+    background-color: var(--principal);
+}
+main > #container2 > .area-pag {
+    text-align: center;
+}
+
+
+
+
+
+main > #container3 > .perimetro {
+    display: none;
+}
+main > #container3 > .perimetro > .perimetro2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+}
+main > #container3 > .perimetro > .perimetro2 > label {
+    margin-bottom: 30px;
+}
+main > #container3 > .perimetro > .perimetro2 > .perimetro3 {
+    border: none;
+    border-bottom: 1px solid black;
+    height: 50px;
+    width: 100px;
+    font-size: 2em;
+    text-align: center;
+}
+main > #container3 > .perimetro > .perimetro2 > .perimetro4  {
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bolder;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+main > #container3 > .perimetro > .perimetro2 > #envio:hover {
+    background-color: var(--principal);
+    color: white;
+}
+
