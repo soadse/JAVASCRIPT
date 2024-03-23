@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nubank</title>
+    <link rel="shortcut icon" href="imagens/nu-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/landscape.css" media="screen and (orientation: landscape)">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        video {
+            width: 100%;
+        }
+        button {
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            font-weight: bolder;
+        }
+        canvas {
+            width: 100%;
+        }
+        #voltar {
+            position: absolute;
+            top: 2%;
+            right: 3%;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.219);
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bolder;
+        }
+        a {
+            text-decoration: none;
+            color: #810AD1;
+            font-size: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <video autoplay></video>
+        <button>Print</button>
+        <canvas></canvas>
+        <a href="pagina-inicial.html" id="voltar">←Voltar</a>
+    </div>
+    
+
+    <script>
+        var video = document.querySelector('video')
+
+        navigator.mediaDevices.getUserMedia({video:true})
+        .then(stream => {
+            video.srcObject = stream;
+            video.play
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
+        document.querySelector('button').addEventListener('click', () =>{
+            var canvas = document.querySelector('canvas');
+            canvas.height = video.videoHeight;
+            canvas.width = video.videoWidth;
+            var context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0);
+            var link = document.createElement('a');
+            link.download = 'foto.png';
+            link.href = canvas.toDataURL();
+            link.textContent = 'Baixar Imagem';
+            document.body.appendChild(link);
+        })
+    </script>
+    
+</body>
+</html>
