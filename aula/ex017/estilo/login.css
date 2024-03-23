@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+:root {
+    --principal: #810AD1;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#img {
+    background-image: url(../imagens/nu-logo-branco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100px;
+    height: 100px;
+    animation: some forwards 3s;
+}
+@keyframes some {
+    0% {
+        opacity: 0%;
+    }
+    
+    90% {
+        width: 100%;
+        height: 100%;
+        opacity: 100%;
+    } 
+    100% {  
+    }
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    animation: mostra forwards 4s;
+}
+@keyframes mostra {
+    0% {
+        display: none;
+    }
+    90% {
+        display: none;
+    }
+    91% {
+        opacity: 0%;
+    }
+    100% {
+        display: flex;
+    }
+}
+#container > h1 {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+#container > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container > form > input {
+    margin-top: 20px;
+    width: 220px;
+    border: none;
+    height: 30px;
+    border-bottom: 1px solid black; 
+}
+#container > form > #pega {
+    border: 1px solid gray;
+    height: 50px;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+#container > form > #pega:hover {
+    background-color: var(--principal);
+    color: white;
+}

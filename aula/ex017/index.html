@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nubank</title>
+    <link rel="stylesheet" href="estilo/login.css">
+    <link rel="shortcut icon" href="imagens/nu-logo.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="img">
+    </div>
+    <div id="container">
+        <h1>Faça seu login</h1>
+        <form action="pagina-inicial.html" target="_self" rel="next">
+            <input type="text" name="nome" id="nome" placeholder="Nome" required maxlength="30">
+            <input type="password" name="senha" id="senha" placeholder="Senha" required minlength="6" maxlength="6">
+            <input type="submit" value="Acessar" id="pega" onclick="pegar()">
+        </form>
+    </div>
+    <div id="container2">
+        <div id="showNome"></div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+:root {
+    --principal: #810AD1;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    width: 100vw;
+    height: 90vh;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: var(--principal);
+}
+
+main {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+main > #saldo-conta {
+    display: none;
+    position: absolute;
+    left: 10px;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+main .img-pi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bcaac9;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;  
+}
+main #img-mostra {
+     display: none;
+}
